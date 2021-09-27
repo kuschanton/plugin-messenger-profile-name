@@ -1,0 +1,6 @@
+POST http://localhost:3000/get-facebook-profile-name
+Content-Type: application/json
+
+{
+  "psid": "4073526296026604"
+}
