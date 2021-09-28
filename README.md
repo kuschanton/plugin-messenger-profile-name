@@ -1,19 +1,19 @@
 # Function for Twilio Flex to show Facebook Profile name
 
-This Function when used in Twilio Flex enables your agents to see a Facebook profile name on incoming task instead of the PSID.
+This Function when used in Twilio Flex enables your agents to see a Facebook profile name on incoming task instead of the Facebook Page Scoped ID (PSID).
 
 ## Screenshots
 This is how Flex shows a Facebook messenger task by default:
 
 ![Default flex behaviour](./docs/DefaultBehaviour.png "Default flex behaviour")
 
-This is how it looks like with function:
+This is how it looks like with the function:
 
 ![Facebook profile name](./docs/WithFunction.png "Facebook profile name")
 
 ## How it works?
 
-When a new Task created in TaskRouter a callback will be fired to the lambda function. 
+When a new Task is created in TaskRouter a callback will be fired to the lambda function. 
 The function will check if the task channel is Facebook.
 If it is the case a request will be made to Facebook API to get profile first and last name using PSID.
 Then the function will update the task attributes to overwrite the `name` attribute with first and last name.
@@ -30,8 +30,9 @@ The content of the newly created file should be updated with:
 
 _Note: I tested it with a Facebook App Access Token.
 I had to give access for the App to manage the Facebook Page that I used to configure Messenger channel on Twilio platform.
-At the time of writing the link to App configuration is: https://developers.facebook.com/apps/YOUR_APP_ID/messenger/settings/
-How to add Facebook channel to Flex you can find [here](https://support.twilio.com/hc/en-us/articles/360018783533-Integrating-Facebook-Messenger-with-Twilio-Flex)._
+At the time of writing the link to App configuration is: https://developers.facebook.com/apps/YOUR_APP_ID/messenger/settings/_
+
+_How to add Facebook channel to Flex you can find [here](https://support.twilio.com/hc/en-us/articles/360018783533-Integrating-Facebook-Messenger-with-Twilio-Flex)._
 
 ## Project Setup
 
@@ -65,4 +66,4 @@ npm run deploy
 ```
 
 ## Contributors ✨
-Contributions of any kind welcome!
+Contributions of any kind are welcome!
